@@ -19,3 +19,5 @@ Currently implemented patterns include:
 Follows semantic versioning using https://gopkg.in/ - import from
 [`gopkg.in/eapache/go-resiliency.v1`](https://gopkg.in/eapache/go-resiliency.v1)
 for guaranteed API stability.
+
+Forked to be used as dependencies in other packages
