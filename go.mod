@@ -1,3 +1,3 @@
-module github.com/eapache/go-resiliency
+module github.com/BetaLixT/go-resiliency
 
-go 1.13
+go 1.18
