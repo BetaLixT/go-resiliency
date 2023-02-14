@@ -1,11 +1,23 @@
 # Changelog
 
+*Note: I will occasionally bump the minimum required Golang version without
+bumping the major version of this package, which violates the official Golang
+packaging convention around breaking changes. Typically the versions being
+dropped are multiple years old and long unsupported.*
+
+#### Version 1.3.0 (2022-06-27)
+
+ - Increased minimum Golang version to 1.13.
+ - Fix a goroutine leak in `Deadline.Run()` on `ErrTimeOut`.
+ - Add a `go.mod` file to conform to more recent Golang version standards.
+ - Use `errors.Is` when classifying errors for the `Retrier` (thanks to Taufik
+   Rama).
+ - Add implementation of `LimitedExponentialBackoff` for the `Retrier` (thanks
+   to tukeJonny).
+
 #### Version 1.2.0 (2019-06-14)
 
-*Note: This release requires Golang at least 1.7, which is higher than the
-previous release. All the versions being dropped are multiple years old and no
-longer supported upstream, so I'm not counting this as a breaking change.*
-
+ - Increased minimum Golang version to 1.7.
  - Add `RunCtx` method on `Retrier` to support running with a context.
  - Ensure the `Retrier`'s use of random numbers is concurrency-safe.
  - Bump CI to ensure we support newer Golang versions.
